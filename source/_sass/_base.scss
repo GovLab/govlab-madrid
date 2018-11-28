@@ -1,0 +1,143 @@
+body {
+  font-size: 18px;
+}
+
+p>a {
+  text-decoration: none;
+}
+
+.top-bar {
+  background-color: transparent;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  &__button {
+    color: $alt-color;
+  }
+  &__logo {
+    padding: 10px;
+    position: relative;
+    > img {
+      @include breakpoint($medium) {
+      }
+      @include breakpoint($small-only) {
+      }
+      @include breakpoint($large) {
+      }
+    }
+  }
+}
+
+.main-menu {
+  box-shadow: none;
+}
+
+.footer {
+  padding-top: 40px;
+  &__content {
+    text-align: center;
+    &__text-link {
+      display: inline-block;
+      padding: 20px;
+      font-size: 3rem;
+      font-weight: 500;
+      padding-bottom: 20px;
+      opacity: .5;
+      transition: all .4s ease;
+      @include breakpoint($medium) {
+        font-size: 1.8rem;
+      }
+      @include breakpoint($small-only) {
+        font-size: 1.5rem;
+      }
+      @include breakpoint($large) {
+        font-size: 2rem;
+      }
+      &:hover {
+        text-decoration: none;
+        opacity: 1;
+        transition: all .4s ease;
+      }
+    }
+    h4 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      padding-bottom: 20px;
+    }
+    img {
+      max-width: 300px;
+      padding: 20px;
+      opacity: .5;
+      transition: all .4s ease;
+      border: dashed;
+      border-color: transparent;
+      &:hover {
+        opacity: 1;
+        transition: all .4s ease;
+      }
+    }
+  }
+}
+
+.copyright {
+  p {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  &__cc-badge {
+    @include breakpoint($small-only) {
+      display: inline;
+    }
+  }
+}
+
+.button {
+
+}
+.page-section {
+  .button {
+    border-bottom: none;
+    &:hover {
+      border-bottom: none;
+    }
+  }
+}
+
+.centered {
+  text-align: center;
+}
+
+.block-centered {
+  margin: 0 auto;
+}
+
+.sticky {
+  &--main {
+    background-color: $main-color;
+  }
+}
+
+.lang-select {
+  color: $white;
+  &--active {
+    // color: $alt-color-2-light;
+    font-weight: bold;
+  }
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.top-bar {
+  position: absolute;
+  width: 100%;
+}
+
+.list-title {
+  font-size: 1.9rem;
+  font-weight: 100;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  text-transform: uppercase;
+}

@@ -1,0 +1,509 @@
+.hex .top {
+    width: 0;
+    border-bottom: 30px solid $main-color;
+    border-left: 52px solid transparent;
+    border-right: 52px solid transparent;
+}
+.hex .middle {
+    width: 104px;
+    height: 60px;
+    background: $main-color;
+}
+.hex .bottom {
+    width: 0;
+    border-top: 30px solid $main-color;
+    border-left: 52px solid transparent;
+    border-right: 52px solid transparent;
+}
+
+.hex {
+    float: left;
+    margin-left: 3px;
+    margin-bottom: -26px;
+    &--img {
+        .middle {
+            background-color: rgba(0,0,0,0);
+            background-image: url('../images/logo-data-stewards-gray-neg-small.png');
+            background-repeat: no-repeat;
+            background-size: 106px;
+            background-position: -1px -1px;
+            height: 120px;
+        }
+        .top {
+            border: none;
+        }
+        .bottom {
+            border: none;
+        }
+        &--alt {
+            background-image: url('../images/logo-data-stewards-gray-neg-small.png');
+        }
+    }
+}
+
+.hex-row {
+    clear: left;
+}
+.hex-row.even {
+    margin-left: 53px;
+}
+
+// .hex {
+//   float: left;
+//   position: relative;
+//   width: 110px;
+//   height: 63.51px;
+//   margin: 31.75px 0;
+//   background-image: url('../images/logo-data-stewards-gray-neg-small-square.png');
+//   background-size: auto 127.0171px;
+//   background-position: center;
+// }
+
+// .hex .top,
+// .hex .bottom {
+//   position: absolute;
+//   z-index: 1;
+//   width: 77.78px;
+//   height: 77.78px;
+//   overflow: hidden;
+//   -webkit-transform: scaleY(0.5774) rotate(-45deg);
+//   -ms-transform: scaleY(0.5774) rotate(-45deg);
+//   transform: scaleY(0.5774) rotate(-45deg);
+//   background: inherit;
+//   left: 16.11px;
+// }
+
+// /*counter transform the bg image on the caps*/
+// .hex .top:after,
+// .hex .bottom:after {
+//   content: "";
+//   position: absolute;
+//   width: 110.0000px;
+//   height: 63.50852961085884px;
+//   -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-31.7543px);
+//   -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-31.7543px);
+//   transform:          rotate(45deg) scaleY(1.7321) translateY(-31.7543px);
+//   -webkit-transform-origin: 0 0;
+//   -ms-transform-origin: 0 0;
+//   transform-origin: 0 0;
+//   background: inherit;
+// }
+
+// .hex .top {
+//   top: -38.8909px;
+// }
+
+// .hex .top:after {
+//   background-position: center top;
+// }
+
+// .hex .bottom {
+//   bottom: -38.8909px;
+// }
+
+// .hex .bottom:after {
+//   background-position: center bottom;
+// }
+
+// .hex:after {
+//   content: "";
+//   position: absolute;
+//   top: 0.0000px;
+//   left: 0;
+//   width: 110.0000px;
+//   height: 63.5085px;
+//   z-index: 2;
+//   background: inherit;
+// }
+
+.top-section {
+    overflow: hidden;
+    margin-top: -50px;
+    background-color: $main-color;
+    position: relative;
+    @include breakpoint($small-only) {
+        // background-size: 165%;
+    }
+    @include breakpoint($medium) {
+        // background-size: 150%;
+    }
+    @include breakpoint($large) {
+        // background-image: none;
+    }
+    &--tile-image-background {
+        background-repeat: repeat;
+    }
+    &--hexagon-grid-background {
+    }
+    &__overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        &--white {
+            background-color: rgba(255,255,255,0.25);
+        }
+    }
+    .gradient {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: linear-gradient(rgba(0,0,0,0),$main-color);
+        &--down {
+            background-image: linear-gradient(rgba(0,0,0,0),$main-color);
+        }
+        &--up {
+            background-image: linear-gradient($main-color, rgba(0,0,0,0));
+        }
+        &--left {
+            background-image: linear-gradient(90deg, $main-color, rgba(0,0,0,0));
+        }
+        &--right {
+            background-image: linear-gradient(90deg, rgba(0,0,0,0), $main-color);
+        }
+        &--45-top-left {
+            background-image: linear-gradient(135deg, $main-color 50%, transparentize($main-color, 1));
+        }
+        z-index: 1;
+    }
+    &__logo {
+        position: relative;
+        z-index: 2;
+        @include breakpoint($medium) {
+            padding: 70px 250px;
+            padding-top: 150px;
+        }
+        @include breakpoint($between-small) {
+            padding: 70px 180px;
+            padding-top: 150px;
+        }
+        @include breakpoint($small-only) {
+            padding: 50px 10px;
+            padding-top: 120px;
+        }
+        @include breakpoint($large) {
+            padding: 190px 3px 0 3px;
+            // padding-top: 190px;
+            // padding-bottom: 0;
+        }
+        .lg-img {
+            @include breakpoint($small-only) {
+                display: none;
+            }
+            @include breakpoint($medium) {
+                display: none;
+            }
+            @include breakpoint($large) {
+                display: block;
+            }
+        }
+        .sm-img {
+            @include breakpoint($large) {
+                display: none;
+            }
+        }
+    }
+    &__text {
+        position: relative;
+        z-index: 2;
+        color: $white;
+        & > h3 {
+          padding: 0 0 50px 0;
+          opacity: 1;
+          font-size: 2.02rem;
+          @include breakpoint($small-only) { font-size: 1.4rem; padding: 0 0 50px 0; }
+          @include breakpoint($medium) { font-size: 1.6rem; padding: 0 100px 50px 100px; }
+          @include breakpoint($large) { font-size: 2.02rem; padding: 0 0 50px 0; }
+      }
+      &:after {
+          content: "";
+          display: inline-block;
+          width: 100%;
+      }
+      span {
+        font-size: 1.5rem;
+        @include breakpoint($small-only) {
+            font-size: 1.4rem;
+        }
+    }
+    @include breakpoint($small-only) {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    @include breakpoint($medium) {
+        padding-left: 50px;
+        padding-right: 50px;
+        text-align: center;
+    }
+    @include breakpoint($large) {
+        padding-left: 0;
+        padding-right: 0;
+            // text-align: justify;
+            // text-align-last: justify;
+        }
+    }
+}
+.bg-panel {
+    background-position: center;
+    background-size: cover;
+    &__row {
+      &--dark {
+        background-color: rgba(darken($main-color,3),.75);
+        color: white;
+    }
+    &--light {
+        background-color: rgba($alt-color,.75);
+        color: darken($main-color,8);
+    }
+}
+&__content {
+        // color: white;
+        // background-color: rgba(darken($main-color,3),.75);
+        // &--v-padded {
+        //   padding: 70px 0;
+        // }
+        &--light {
+          background-color: rgba($alt-color,.75);
+          color: darken($main-color,8);
+      }
+      &--dark {
+          background-color: rgba(darken($main-color,3),.75);
+          color: white;
+      }
+      @include breakpoint($medium) {
+        padding: 50px;
+    }
+    @include breakpoint($small-only) {
+        padding: 30px;
+    }
+    @include breakpoint($large) {
+        padding: 70px;
+    }
+    ul {
+        li {
+            padding-bottom: 20px;
+        }
+    }
+}
+}
+.divider {
+    h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 200;
+        @include breakpoint($small-only) {
+            font-size: 1.8rem;
+        }
+    }
+    &--purple {
+        color: $alt-color;
+        background-color: $main-color;
+    }
+}
+.page-section {
+    color: lighten($main-color,10);
+    font-weight: 200;
+    &--no-padding {
+      padding: 0;
+  }
+  a {
+    border-bottom: 1px solid darken($alt-color-light,25%);
+    &:hover {
+        text-decoration: none;
+        background-color: darken($alt-color-light,15%);
+        border-bottom: 1px solid darken($alt-color-light,40%);
+    }
+}
+.content {
+    padding-left: 60px;
+    padding-right: 60px;
+        // &--v-padded {
+        //   padding: 70px 0;
+        // }
+        @include breakpoint($medium) {
+            padding: 30px 0;
+        }
+        @include breakpoint($small-only) {
+            padding: 20px 0;
+        }
+        @include breakpoint($large) {
+            padding: 40px 0;
+        }
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 200;
+            @include breakpoint($small-only) {
+                font-size: 1.8rem;
+            }
+        }
+        @include breakpoint($small-only) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        ul {
+            padding-left: 18px;
+            li {
+                padding-bottom: 10px;
+            }
+        }
+    }
+    &--yellow {
+        background-color: $alt-color-light;
+    }
+    &--blue {
+        background-color: $main-color-light;
+        .contact {
+            text-align: center;
+            h3 {
+                text-transform: none;
+                font-weight: 200;
+                margin: 0;
+                font-size: 1.5rem;
+            }
+            p {
+                padding-left: 15px;
+                padding-right: 15px;
+                padding-bottom: 5px;
+            }
+            .button {
+                border-bottom: none;
+                background-color: transparent;
+                font-weight: 500;
+                border: 2px solid;
+                margin-bottom: 5px;
+                padding: 5px 10px;
+                &:hover {
+                    background-color: $main-color;
+                    color: white;
+                    border-color: $main-color;
+                    // transition: all .6s ease;
+                }
+            }
+        }
+    }
+}
+.page-section--team {
+    .column {
+        margin: 20px 0;
+        // text-align: center;
+    }
+    .modal {
+        font-weight: 100;
+        padding: 80px;
+        background-color: darken($main-color,8);
+        color: rgba(255,255,255,0.8);
+        box-shadow: none;
+        height: 80vh;
+        top: 10vh;
+        @include breakpoint($medium) {
+            height: 95vh;
+            top: 5vh;
+            width: 100%;
+            left: 0;
+            margin: 0;
+            padding: 20px;
+        }
+        @include breakpoint($small-only) {
+            height: 95vh;
+            top: 5vh;
+            width: 100%;
+            left: 0;
+            margin: 0;
+            padding: 20px;
+        }
+        @include breakpoint($large) {
+            height: 80vh;
+            top: 10vh;
+            width: 70%;
+            left: 50%;
+            margin: 0 0 0 -35%;
+            padding: 80px;
+        }
+        &__image {
+            border-radius: 50%;
+            float: left;
+            width: 180px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        &__text {
+            color: darken($main-color,8);
+            float: left;
+            margin-left: 40px;
+            width: 60%;
+            @include breakpoint($small-only) {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+        &__close {
+            margin-top: -40px;
+            margin-right: -40px;
+            @include breakpoint($small-only) {
+                margin: 0;
+            }
+        }
+        &__title {
+            color: rgba(255,255,255,0.8);
+            text-transform: none;
+            font-weight: 100;
+            padding: 0;
+            font-size: 1.5rem;
+            a:hover {
+                background-color: transparent;
+            }
+        }
+        &__subtitle {
+            display: block;
+        }
+        &__description {
+            font-size: 0.9rem;
+            line-height: 1.2;
+            max-height: 47vh;
+            overflow-y: scroll;
+            a {
+                text-decoration: none;
+                &:hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+.team-text {
+    float: left;
+    margin-left: 20px;
+    margin-top: 18px;
+    color: darken($main-color,8);
+    max-width: 60%;
+}
+.team-portrait {
+    float: left;
+    border-radius: 50%;
+    width: 80px;
+}
+.team-subtitle {
+    font-size: 0.75rem;
+    display: block;
+}
+
+.logo-image {
+    height: 100px;
+}
+
+.logo-text {
+    font-weight: 100;
+    font-size: 90px;
+    vertical-align: middle;
+}
+
+.top-section--madrid-bg {
+   background-image: url('../images/madrid.svg');
+    background-size: 75%;
+    background-position: 40vw;
+   background-repeat: no-repeat;
+}

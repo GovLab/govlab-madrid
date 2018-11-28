@@ -1,0 +1,23 @@
+<header class="top-bar">
+  <!-- <span class="top-bar__button js-trigger-menu">menu</span>
+  <nav class="main-menu js-target-menu main-menu--left">
+    <a href="{{'/'.html' | relative_url}}">Home</a>
+  </nav> -->
+  <a class="top-bar__logo" href="http://thegovlab.org">
+    <img src="{{'/images/govlab-logo-white.png' | relative_url}}" alt="GovLab Logo">
+  </a>
+  <!-- <span class="top-bar__button js-trigger-menu">more_vert</span>
+  <nav class="main-menu js-target-menu main-menu--right">
+    <a href="#">Github Repository</a>
+    <a href="{{'/sandbox.html' | relative_url}}">Sandbox</a>
+  </nav> -->
+  <div class='lang-select'>
+    {% capture en_link %}{{ site.baseurl_root }}{{ page.url }}{% endcapture %}
+    {% capture es_link %}{{ site.baseurl_root }}/es{{ page.url }}{% endcapture %}
+    {% if site.lang == "en" %}
+    <a class="lang-select--active" href="{{ en_link }}">English</a>  | <a href="{{ es_link }}" >Español</a>
+    {% elsif site.lang == "es" %}
+    <a href="{{ en_link }}">English</a>  | <a class="lang-select--active" href="{{ es_link }}" >Español</a>
+    {% endif %}
+  </div>
+</header>
