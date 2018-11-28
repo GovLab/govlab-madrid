@@ -15,9 +15,9 @@
     {% capture en_link %}{{ site.baseurl_root }}{{ page.url }}{% endcapture %}
     {% capture es_link %}{{ site.baseurl_root }}/es{{ page.url }}{% endcapture %}
     {% if site.lang == "en" %}
-    <a class="lang-select--active" href="{{ en_link }}">English</a>  | <a href="{{ es_link }}" >Español</a>
+    <a class="lang-select--active" href="{{ en_link }}"><span class="lang-select--long">English</span><span class="lang-select--short">EN</span></a>  | <a href="{{ es_link }}" ><span class="lang-select--long">Español</span><span class="lang-select--short">ES</span></a>
     {% elsif site.lang == "es" %}
-    <a href="{{ en_link }}">English</a>  | <a class="lang-select--active" href="{{ es_link }}" >Español</a>
+    <a href="{{ en_link }}"><span class="lang-select--long">English</span><span class="lang-select--short">EN</span></a>  | <a class="lang-select--active" href="{{ es_link }}" ><span class="lang-select--long">Español</span><span class="lang-select--short">ES</span></a>
     {% endif %}
   </div>
 </header>

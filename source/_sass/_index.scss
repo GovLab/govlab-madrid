@@ -170,6 +170,7 @@
         z-index: 1;
     }
     &__logo {
+         white-space: nowrap;
         position: relative;
         z-index: 2;
         @include breakpoint($medium) {
@@ -493,17 +494,44 @@
 
 .logo-image {
     height: 100px;
+    @include breakpoint($medium) {
+        height: 40px;
+    }
+    @include breakpoint($small-only) {
+        height: 40px;
+    }
+    @include breakpoint($large) {
+        height: 100px;
+    }
 }
 
 .logo-text {
     font-weight: 100;
     font-size: 90px;
     vertical-align: middle;
+    @include breakpoint($medium) {
+        font-size: 30px;
+    }
+    @include breakpoint($small-only) {
+        font-size: 30px;
+    }
+    @include breakpoint($large) {
+        font-size: 90px;
+    }
 }
 
 .top-section--madrid-bg {
-   background-image: url('../images/madrid.svg');
-    background-size: 75%;
+    background-image: url('../images/madrid.svg');
     background-position: 40vw;
-   background-repeat: no-repeat;
+    background-size: 75%;
+    background-repeat: no-repeat;
+    @include breakpoint($medium) {
+        background-size: 100%;
+    }
+    @include breakpoint($small-only) {
+        background-size: 100%;
+    }
+    @include breakpoint($large) {
+        background-size: 75%;
+    }
 }

@@ -126,8 +126,32 @@ p>a {
     font-weight: bold;
   }
   position: absolute;
-  right: 5px;
-  top: 5px;
+  right: 12px;
+  top: 12px;
+}
+
+.lang-select--long {
+  @include breakpoint($medium) {
+    display: inline;
+  }
+  @include breakpoint($small-only) {
+    display: none;
+  }
+  @include breakpoint($large) {
+    display: inline;
+  }
+}
+
+.lang-select--short {
+  @include breakpoint($medium) {
+    display: none;
+  }
+  @include breakpoint($small-only) {
+    display: inline;
+  }
+  @include breakpoint($large) {
+    display: none;
+  }
 }
 
 .top-bar {
